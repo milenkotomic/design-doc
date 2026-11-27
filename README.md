@@ -9,7 +9,11 @@ tickets or code.
   storyline for a talk or presentation.
 - **A conversation first**: it reads what exists, asks open questions about
   the why before offering options, one at a time, and lays out the approaches
-  with a pick. Say "just draft it" at any point.
+  with a pick. It checks what you say about today against the code, pins
+  down vague terms and tests rules with an edge case. Say "just draft it" at
+  any point.
+- **Design it twice**, on request: three subagents design the same interface
+  under different constraints, compared side by side.
 - **Three labels**: every statement a reviewer could challenge is marked
   `Decided` (you said it), `Assumed` (the model filled it in) or `Open` (a
   question for reviewers), so readers know where to push.
@@ -48,7 +52,10 @@ esto", "escribe un ADR", "arma el hilo de la charla". Or
 
 The conversation takes inspiration from the brainstorming skill in
 [obra/superpowers](https://github.com/obra/superpowers) (MIT). The end state
-is different on purpose: a reviewed document, not a plan.
+is different on purpose: a reviewed document, not a plan. The test for when
+a decision earns an ADR, the checks against the code and "design it twice"
+are adapted from the domain-modeling and codebase-design skills in
+[mattpocock/skills](https://github.com/mattpocock/skills) (MIT).
 
 ## License
 

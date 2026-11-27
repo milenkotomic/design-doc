@@ -61,6 +61,19 @@ file; the date in the name is the date of the first draft.
    - Play back as you go: when you understand one part, describe it in a
      short paragraph, mark what is theirs and what you filled in, and ask
      what is wrong or missing.
+   - Check what they say against what exists. When the user states how
+     something works today, look at the code or the earlier document. If
+     they disagree, say so with the place you saw it and ask which is right:
+     "the handler cancels the whole order, and you said partial cancellation
+     exists". A design built on a wrong picture of today fails in review.
+   - Pin down words that carry the design. When a term is vague or used for
+     two things ("account": the customer or the login?), propose one meaning
+     and use it from then on. When the project already defines the term
+     differently, say so before going further.
+   - Test a rule with a case. When they describe how two things relate or
+     what is allowed, invent one concrete situation at the edge of it and ask
+     what should happen. Use this when a rule sounds settled but was stated
+     in general terms.
    - Ground to cover, as territory and not as a questionnaire: why now, what
      success looks like, goals, non-goals, what would make it a failure even
      if it works, what exists today, what they have seen elsewhere, the
@@ -70,6 +83,16 @@ file; the date in the name is the date of the first draft.
    two or three real alternatives, concrete enough to picture, with what each
    trades off, your pick and why. When there is one sensible way, say so and
    say why the others do not fit. Wait for their choice.
+
+   For a design doc or an RFC where the shape of an interface or a structure
+   is the main decision, and the session has a subagent tool, offer once to
+   design it twice: three fresh subagents get the same constraints and one
+   different instruction each (the smallest possible interface; the most
+   flexible one; the one that makes the most common use trivial). Tell the
+   user it costs three agents and run it only on a yes. Each returns the
+   shape, one usage example, what it hides and where it is weak. Present them
+   one after another, compare them, and give your pick or a combination; the
+   alternatives go into the document's Approaches section.
 
 "Just draft it", "you decide" or similar, at any point: stop asking and go to
 Draft. Everything you had to fill in becomes an `Assumed` line.
@@ -82,6 +105,12 @@ Draft. Everything you had to fill in becomes an `Assumed` line.
 | **RFC** | a proposal the author wants challenged; alternatives and open questions lead | two to five pages |
 | **Design doc** | how something will work: a system, an architecture, a feature | as long as the design needs |
 | **Storyline** | a talk or presentation: audience, the one takeaway, the beats in order | one to two pages; stops before slides, visuals and speaker notes |
+
+A decision earns an ADR when all three hold: it is costly to reverse, a
+future reader would wonder why it was done this way, and there were real
+alternatives with a trade-off between them. When one is missing, say which in
+one line and suggest a line in the design doc or a code comment instead; write
+the ADR anyway if the user still wants it.
 
 Several independent decisions are several ADRs. Several independent projects
 are several documents: say so, agree on an order, and do one at a time.
