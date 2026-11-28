@@ -1,6 +1,6 @@
 {
   "name": "design-doc",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Think an idea through in conversation and end with a document others can review: an ADR, an RFC, a design doc or a talk storyline. Every claim is labelled decided, assumed or open, and review comments are worked back in with a log.",
   "author": {
     "name": "Milenko Tomic",

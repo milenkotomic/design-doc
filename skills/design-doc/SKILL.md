@@ -140,7 +140,18 @@ link, measurement). An ADR does not label line by line: it carries one
    readers to do.
 4. No secrets or personal data: no tokens, passwords, keys or private
    addresses. Describe where a credential lives instead.
-5. **Reader check**, for every type except ADR: dispatch a fresh subagent
+5. **Pictures**, for a design doc or an RFC, when a part of the design is
+   easier to see than to read (the parts and what crosses between them, an
+   exchange in order, a state machine, a data shape) and the `system-map`
+   skill is in this session's skill list: invoke it and follow its "For
+   another skill" section. One map per question, three at most. Save each
+   SVG next to the document as `<slug>-<n>.svg` and reference it from the
+   Markdown as `![<what it shows>](<slug>-<n>.svg)`, with the map file kept
+   beside it so a revision can change it. A picture of how things work today
+   is drawn from the code with citations; a picture of the proposal has none,
+   and what it shows is still labelled `Decided`, `Assumed` or `Open` in the
+   text under it. Without the skill, use a sketch in text as before.
+6. **Reader check**, for every type except ADR: dispatch a fresh subagent
    with the prompt in `references/reader-check.md`. Tell the user a reader
    will go through it first. Sort what comes back:
    - answered by the conversation or the project: put the answer in the
@@ -149,7 +160,7 @@ link, measurement). An ADR does not label line by line: it carries one
    - theirs: bring these to the user in one message, most important first.
      One round only.
    Without a subagent tool, reread the document as that reader yourself.
-6. Hand over: the path, the type, the counts of decided, assumed and open
+7. Hand over: the path, the type, the counts of decided, assumed and open
    lines, and the assumed lines listed so they can be checked while reading.
 
 ## Publish
@@ -158,7 +169,8 @@ Only when the user asks to share it.
 
 - Render the markdown as a readable HTML page: the header, a short "what I
   need from you" box, the open questions gathered at the top, and each label
-  shown as a visible tag. Publish it with the Artifact tool as a private
+  shown as a visible tag. Inline each referenced SVG picture in the page
+  where the Markdown references it. Publish it with the Artifact tool as a private
   page, and give the link. Sharing it further is the user's action.
 - The markdown file stays the source. Never edit the page by hand; change the
   file and publish again to the same page.

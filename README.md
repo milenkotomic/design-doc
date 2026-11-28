@@ -17,6 +17,10 @@ tickets or code.
 - **Three labels**: every statement a reviewer could challenge is marked
   `Decided` (you said it), `Assumed` (the model filled it in) or `Open` (a
   question for reviewers), so readers know where to push.
+- **Pictures where they help**: with the
+  [system-map](https://github.com/milenkotomic/system-map) plugin installed,
+  a design doc or RFC gets a diagram of the parts, an exchange, a state
+  machine or a data shape, stored next to the document.
 - **A reader check**: a fresh subagent reads the draft as a reviewer who was
   not in the conversation, before you see it.
 - **A review round**: comments are worked back in, each one accepted, declined

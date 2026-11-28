@@ -110,8 +110,9 @@ why. Required.>
 
 ## Design
 <The chosen approach in detail: parts and their responsibilities, the
-interfaces between them, data, flows, failure behaviour. A diagram or a
-sketch in text where seeing helps more than reading. Label each statement a
+interfaces between them, data, flows, failure behaviour. A picture where
+seeing helps more than reading: a system-map SVG when that skill is
+available (`![what it shows](<slug>-1.svg)`), otherwise a sketch in text. Label each statement a
 reviewer could challenge.>
 
 ## Left to the builder
